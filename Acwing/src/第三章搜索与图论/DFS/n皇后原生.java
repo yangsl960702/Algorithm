@@ -3,6 +3,12 @@ package 第三章搜索与图论.DFS;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * 原生n皇后做法
+ * 直接无脑遍历x 和 y，用k做标记位放了几个棋子
+ * y 到极值，y = 0， x ++
+ * x 到极值，检查k是否符合要求，符合要求即输出
+ */
 public class n皇后原生 {
     public static int n;
     public static final int N = 10;
