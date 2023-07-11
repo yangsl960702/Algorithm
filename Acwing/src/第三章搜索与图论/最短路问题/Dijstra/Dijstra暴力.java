@@ -6,14 +6,15 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 
 /**
- * Dijstra暴力法
+ * Dijstra常用于： 单源无负权图求最短路径
  *Dijstra过程：
  * 1.找到当前还未确定最短距离的点
  * 2.用找到的点更新其他点的距离
  * 3.将该点标记已找到最短距离
  *
- * 暴力体现在：寻找未确定距离的最短的点过程是暴力的，时间复杂度是O(N)。
- *暴力Dijstra一般用在稠密图
+ *
+ *Dijstra暴力法暴力体现在：寻找未确定距离的最短的点过程是暴力的，时间复杂度是O(N)。
+ *暴力Dijstra一般用在稠密图，时间复杂度是O(N^2)
  */
 public class Dijstra暴力 {
     public static final int N = 510;
