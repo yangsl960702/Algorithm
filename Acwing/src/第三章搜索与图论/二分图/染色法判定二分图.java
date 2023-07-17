@@ -1,4 +1,4 @@
-package 第三章搜索与图论;
+package 第三章搜索与图论.二分图;
 
 import java.io.BufferedReader;
 import java.io.IOException;
