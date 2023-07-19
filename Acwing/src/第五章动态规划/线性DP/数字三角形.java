@@ -1,4 +1,4 @@
-package 第五章动态规划.背包问题;
+package 第五章动态规划.线性DP;
 
 import java.io.BufferedReader;
 import java.io.IOException;
