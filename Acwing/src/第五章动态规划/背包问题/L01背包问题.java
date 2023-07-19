@@ -1,9 +1,12 @@
 package 第五章动态规划.背包问题;
 
-import sun.applet.Main;
 
 import java.util.Scanner;
 
+/**
+ * 状态计算涉及 i - 1 层，一维时即需要背包容量从后向前，避免出现放多次物品的情况，
+ * 违反01背包原则
+ */
 public class L01背包问题 {
     public static int n, m;
     public static final int N = 1010;

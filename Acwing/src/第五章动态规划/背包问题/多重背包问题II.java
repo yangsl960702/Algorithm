@@ -4,15 +4,21 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * 总体概述：三重暴力逐一尝试的方法通过：
+ * 将每个物品的数目进行拆分，然后变成简单的01背包问题
+ * 任何一个数都可以拆分成 m = 2^0 + 2^1 + 2^2 + ... + 2^x + c
+ */
 public class 多重背包问题II {
     public static final int N = 2010;
-    public static final int M = 50000;
-    public static int[][] f = new int[N][N];
+    public static final int M = 23000;
+    public static int[][] f = new int[M][N];
     public static int[] v = new int[M];
     public static int[] w = new int[M];
     public static int[] s = new int[M];
     public static int n, m;
     public static int a, b, c;
+    public static int[] f1 = new int[N];
 
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -27,7 +33,6 @@ public class 多重背包问题II {
             b = Integer.parseInt(abc[1]);
             c = Integer.parseInt(abc[2]);
 
-            int all = b * c;
             int k = 1;
             while (k <= c) {
                 v[idx] = a * k;
@@ -36,22 +41,30 @@ public class 多重背包问题II {
                 k *= 2;
                 idx ++ ;
             }
-            if (all > 0) {
-                v[idx] = all * a;
-                w[idx] = all * b;
+            if (c != 0) {
+                v[idx] = c * a;
+                w[idx] = c * b;
                 idx ++ ;
             }
         }
 
-        for (int i = 1; i < idx; i ++ ) {
+        /**
+         * 二维01背包
+         */
+        /*for (int i = 1; i < idx; i ++ ) {
             for (int j = 0; j <= m; j ++ ) {
                 f[i][j] = Math.max(f[i][j], f[i - 1][j]);
                 if (j >= v[i]) {
                     f[i][j] = Math.max(f[i][j], f[i - 1][j - v[i]] + w[i]);
                 }
             }
-        }
+        }*/
 
-        System.out.println(f[n][m]);
+        for (int i = 1; i < idx; i ++ ) {
+            for (int j = m; j >= v[i]; j -- ) {
+                f1[j] = Math.max(f1[j], f1[j - v[i]] + w[i]);
+            }
+        }
+        System.out.println(f1[m]);
     }
 }
