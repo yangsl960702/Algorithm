@@ -76,6 +76,8 @@ public class Kruskal求最小生成树 {
         else System.out.println("impossible");
 
 
+
+
     }
 }
 

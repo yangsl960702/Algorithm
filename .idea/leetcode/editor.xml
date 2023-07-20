@@ -3,7 +3,7 @@
   <component name="LeetcodeEditor">
     <option name="projectConfig">
       <map>
-        <entry key="D:/个人项目/Algorithm/Leetcode/leetcode/editor/cn/[1]两数之和.java">
+        <entry key="$PROJECT_DIR$/Leetcode/leetcode/editor/cn/[1]两数之和.java">
           <value>
             <LeetcodeEditor>
               <option name="contentPath" value="$PROJECT_DIR$/lcHot100/leetcode/editor/cn/doc/content/[1]两数之和.md" />
@@ -22,6 +22,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/lcHot100/leetcode/editor/cn/[1]两数之和.java" />
               <option name="titleSlug" value="two-sum" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/lcHot100/leetcode/editor/cn/[2578]最小和分割.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/lcHot100/leetcode/editor/cn/doc/content/[2578]最小和分割.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2578" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/lcHot100/leetcode/editor/cn/[2578]最小和分割.java" />
+              <option name="titleSlug" value="split-with-minimum-sum" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -44,6 +55,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/lcHot100/leetcode/editor/cn/[3]无重复字符的最长子串.java" />
               <option name="titleSlug" value="longest-substring-without-repeating-characters" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/lcHot100/leetcode/editor/cn/[46]全排列.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/lcHot100/leetcode/editor/cn/doc/content/[46]全排列.md" />
+              <option name="frontendQuestionId" value="leetcode.cn46" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/lcHot100/leetcode/editor/cn/[46]全排列.java" />
+              <option name="titleSlug" value="permutations" />
             </LeetcodeEditor>
           </value>
         </entry>
