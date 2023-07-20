@@ -40,6 +40,7 @@ public class 石子合并 {
                 }
             }
         }
+
         System.out.println(f[1][n]);
     }
 }
