@@ -32,37 +32,50 @@
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
+
+/**
+ * 中心扩散法
+ * 回文字串两种情况：
+ * 当中心点为 i 时：
+ * 1. 回文串长度为奇数，进行中心扩散时，起点为 i - 1, i + 1
+ * 2. 回文串长度为偶数，进行中心扩散时，起点为 i - 1, i,
+ *
+ * 时间复杂度为O(N^2)
+ *
+ * 后续需要进化到O(NlogN)  再进化到O(N)
+ */
 class Solution {
 
     public String longestPalindrome(String s) {
-        String sn = " " + s;
-        int n = s.length();
-        boolean[][] f = new boolean[n + 1][n + 1];
-        int l = 1, r = 1, max = 0;
 
-        for (int i = 1; i <= n; i ++ ) {
-            for (int j = 1; j <= n; j ++ ) {
-                if (i == j) f[i][j] = true;
+        int l1 = 0, r1 = 0, max = 0;
+
+        for (int i = 0; i < s.length(); i ++ ) {
+            int l = i - 1, r = i + 1;
+            while (0 <= l && r < s.length() && s.charAt(l) == s.charAt(r)) {
+                l -- ;
+                r ++ ;
             }
-        }
-
-        for (int i = 1; i <= n; i ++ ) {
-            for (int j = i; j <= n; j ++ ) {
-                System.out.println(j);
-                if (sn.charAt(i) == sn.charAt(j) && (i + 1 > j - 1 || f[i + 1][j - 1] == true)) {
-                    f[i][j] = true;
-                    if (max < j - i + 1) {
-                        l = i;
-                        r = j;
-                        max = Math.max(max, r - l + 1);
-                    }
-                }
+            if (max < (r - 1) - (l + 1) + 1) {
+                l1 = l + 1;
+                r1 = r - 1;
+                max = r - l - 1;
             }
+
+            l = i - 1;
+            r = i;
+            while (0 <= l && r < s.length() && s.charAt(l) == s.charAt(r)) {
+                l -- ;
+                r ++ ;
+            }
+            if (max < (r - 1) - (l + 1) + 1) {
+                l1 = l + 1;
+                r1 = r - 1;
+                max = (r - 1) - (l + 1) + 1;
+            }
+
         }
-        System.out.println(l + " " + r);
-            return sn.substring(l, r + 1);
-
-
+        return s.substring(l1, r1 + 1);
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
