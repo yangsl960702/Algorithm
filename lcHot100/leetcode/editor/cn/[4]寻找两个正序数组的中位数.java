@@ -40,9 +40,29 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
+
+    public static int find(int x, int[] nums) {
+        int l = 0, r = nums.length - 1;
+        while (l < r) {
+            int mid = l + r >> 1;
+            if (nums[mid] < x) l = mid + 1;
+            else r = mid;
+        }
+        return l;
+    }
+
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int all = nums1.length + nums2.length;
-        
+        boolean flag = false;
+        if (all % 2 == 0) flag = true;
+        int l, r;
+        if (flag) {
+            l = all / 2 - 1;
+            r = all / 2;
+        }
+
+
+
 
     }
 }
