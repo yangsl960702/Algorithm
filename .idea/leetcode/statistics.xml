@@ -10,7 +10,11 @@
               <option name="hard" value="0" />
               <option name="medium" value="4" />
               <option name="questionTotal" value="3170" />
+<<<<<<< HEAD
               <option name="solvedTotal" value="6" />
+=======
+              <option name="solvedTotal" value="5" />
+>>>>>>> 6571b0e640fe98b57ae6a91be94e4a0492724433
             </Statistics>
           </value>
         </entry>
