@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Acwing/Acwing.iml" filepath="$PROJECT_DIR$/Acwing/Acwing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Acw周赛/Acw周赛.iml" filepath="$PROJECT_DIR$/Acw周赛/Acw周赛.iml" />
       <module fileurl="file://$PROJECT_DIR$/Algorithm.iml" filepath="$PROJECT_DIR$/Algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/lcHot100/lcHot100.iml" filepath="$PROJECT_DIR$/lcHot100/lcHot100.iml" />
     </modules>
